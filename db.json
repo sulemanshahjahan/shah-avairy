@@ -1,0 +1,11 @@
+{
+    "birds": [
+      { "id": 1, "name": "Red Eye 01", "gender": "male", "species": "love birds", "dateOfBirth": "28-08-2022", "status": "available", "cageNumber": 10, "parents": "pair no 05" },
+      { "id": 2, "name": "Red Eye 02", "gender": "female", "species": "love birds", "dateOfBirth": "4-08-2022", "status": "available", "cageNumber": 10, "parents": "pair no 04" },
+      { "id": 3, "name": "Red Eye 08", "gender": "male", "species": "love birds", "dateOfBirth": "4-5-2022", "status": "available", "cageNumber": 45, "parents": "pair no 01" }
+    ], 
+    "pairs": [
+      {"id": 101, "male": "Red Eye 01", "female": "Red Eye 02", "datePairing": "30-09-2022", "cluth": "1", "eggs": 4, "cageNumber": 45, "status": "available", "name": "RE 001" },
+      {"id": 202, "male": "Red Eye 02", "female": "Red Eye 01", "datePairing": "30-09-2022", "cluth": "1", "eggs": 4, "cageNumber": 46, "status": "available", "name": "RE 002" }
+    ]
+  }
