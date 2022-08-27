@@ -1,6 +1,7 @@
 <template>
-  <router-link :to="{name: 'pairDetails', params: {'id': pair.id}}" class="bird-card">
+  <router-link :to="{name: 'PairDetails', params: { cageNumber: pair.cageNumber}}" class="bird-card">
     <h2>{{pair.name}}</h2>
+    <p><strong>Pair No: </strong> {{pair.cageNumber}}</p>
   </router-link>
 </template>
 

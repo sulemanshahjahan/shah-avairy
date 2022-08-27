@@ -19,7 +19,7 @@ export default{
     getPairs(){
         return apiClient.get('/pairs');
     },
-    getPair(){
-        return axios.get('http://localhost:3000/pairs?cageNumber=46');
+    getPair(id){
+        return axios.get('http://localhost:3000/pairs/', { params: { cageNumber: id } });
     },
 }

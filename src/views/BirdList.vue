@@ -3,8 +3,9 @@
 <div class="events">
 <BirdCard v-for="bird in birds" :key="bird.id" :bird="bird" />
 </div>
+<h2>All of our Pairs</h2>
 <div class="events">
-<PairCard v-for="pair in pairs" :key="pair.id" :bird="pair" />
+<PairCard v-for="pair in pairs" :key="pair.cageNumber" :pair="pair" />
 </div>
 
 

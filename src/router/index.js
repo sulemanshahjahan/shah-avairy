@@ -16,7 +16,7 @@ const routes = [
     component: BirdDetails,
   },
   {
-    path: "/pair-details/:id",
+    path: "/pair-details/:cageNumber",
     name: "PairDetails",
     props: true,
     component: PairDetails,

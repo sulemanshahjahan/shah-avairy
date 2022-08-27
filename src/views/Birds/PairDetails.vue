@@ -8,16 +8,16 @@
 <script>
 import ApiCall from '@/services/EventCalls'
     export default{
-        props: ['id'],
+        props: ['cageNumber'],
         data(){
             return {
                 pair: null
             }
         },
         created() {
-    ApiCall.getPair()
+    ApiCall.getPair(this.cageNumber)
     .then(response => {
-      this.pair = response.data
+      this.pair = response.data[0]
     })
     .catch(error => {
       console.log(error);
