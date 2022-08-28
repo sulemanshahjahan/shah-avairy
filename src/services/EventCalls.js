@@ -22,4 +22,8 @@ export default{
     getPair(id){
         return axios.get('http://localhost:3000/pairs/', { params: { cageNumber: id } });
     },
+    getClutch(){
+      
+        return apiClient.get('/clutches/?id=987&id=876');
+    },
 }
