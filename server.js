@@ -27,3 +27,5 @@ server.use(router)
 server.listen(3000, () => {
   console.log('JSON Server is running')
 })
+
+const port = process.env.PORT || 4000;
