@@ -9,3 +9,9 @@ module.exports = {
     allowedHosts: 'all',
   },
 };
+
+module.exports = {
+singleQuote: true,
+semi: false,
+publicPath: ‘/public/’
+}
