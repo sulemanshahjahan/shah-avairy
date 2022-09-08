@@ -1,6 +1,10 @@
-const http = require('http')
-const fs = require('fs')
-const httpPort = 80
+const jsonServer = require('json-server');
+const server = jsonServer.create();
+const router = jsonServer.router('db.json');
+const middlewares = jsonServer.defaults();
+const port = process.env.PORT || 3000;
+const http = require('http');
+const fs = require('fs');
 
 http
   .createServer((req, res) => {
@@ -16,6 +20,8 @@ http
       res.end(content)
     })
   })
-  .listen(httpPort, () => {
-    console.log('Server listening on: http://localhost:%s', httpPort)
-  })
+
+server.use(middlewares);
+server.use(router);
+
+server.listen(port);
