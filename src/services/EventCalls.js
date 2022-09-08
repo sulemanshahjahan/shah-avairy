@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: 'https://shah-birds.herokuapp.com/',
     withCredentials: false, 
     headers: {
         Accept: 'application/json',
@@ -21,7 +21,7 @@ export default{
         return apiClient.get('/pairs');
     },
     getPair(id){
-        return axios.get('http://localhost:3000/pairs/', { params: { cageNumber: id } });
+        return axios.get('https://shah-birds.herokuapp.com/pairs/', { params: { cageNumber: id } });
     },
     getClutch(ids){
        return axios.get('http://localhost:3000/clutches/', { params: { id: ids } });
