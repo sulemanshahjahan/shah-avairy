@@ -25,4 +25,4 @@ server.use((req, res, next) => {
 // Use default router
 server.use(router)
 
-server.listen(process.env.PORT || 3000);
+server.listen(process.env.PORT || 4000);
