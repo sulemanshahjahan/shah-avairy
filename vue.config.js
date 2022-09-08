@@ -11,7 +11,5 @@ module.exports = {
 };
 
 module.exports = {
-singleQuote: true,
-semi: false,
-publicPath: ‘/public/’
+publicPath: '/public/'
 }
