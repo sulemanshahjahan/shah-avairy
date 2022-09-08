@@ -11,6 +11,7 @@
       props:{
         index: Number,
         clutchids: Number,
+        numOfClutches: Number,
         clutch: {
           type:Object,
           require: true

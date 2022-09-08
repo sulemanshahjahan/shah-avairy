@@ -5,8 +5,8 @@
       { "id": 3, "name": "Red Eye 08", "gender": "male", "species": "love birds", "dateOfBirth": "4-5-2022", "status": "available", "cageNumber": 45, "parents": "pair no 01","pairID": 102 }
     ], 
     "pairs": [
-      {"id": 101, "male": "Red Eye 01", "female": "Red Eye 02", "datePairing": "30-09-2022", "clutchId": 987,  "cageNumber": 45, "status": "available", "name": "Red Eye Pair 1", "birdsID": [1,2] },
-      {"id": 202, "male": "Red Eye 02", "female": "Red Eye 01", "datePairing": "30-09-2022", "clutchId": 876,  "cageNumber": 46, "status": "available", "name": "Red Eye Pair 2", "birdsID": [3] }
+      {"id": 101, "male": "Red Eye 01", "female": "Red Eye 02", "datePairing": "30-09-2022", "clutchId": [987, 876],  "cageNumber": 45, "status": "available", "name": "Red Eye Pair 1", "birdsID": [1,2] },
+      {"id": 202, "male": "Red Eye 02", "female": "Red Eye 01", "datePairing": "30-09-2022", "clutchId": [987] ,  "cageNumber": 46, "status": "available", "name": "Red Eye Pair 2", "birdsID": [3] }
     ],
     "clutches": [
       {
@@ -30,7 +30,18 @@
           "status": "Broken",
           "dateOfBinding": "2022-06-22",
           "comments": ""
-        }]
+        },
+        {
+          "status": "Broken",
+          "dateOfBinding": "2022-06-22",
+          "comments": ""
+        },
+        {
+          "status": "Broken",
+          "dateOfBinding": "2022-06-22",
+          "comments": ""
+        }
+		]
       }
     ]
   }

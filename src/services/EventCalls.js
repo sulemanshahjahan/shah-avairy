@@ -10,8 +10,9 @@ const apiClient = axios.create({
 })
 
 export default{
-    getBirds(){
-        return apiClient.get('/birds');
+    getBirds(birdsID){
+        return apiClient.get('/birds', { params: { id: birdsID } });
+
     },
     getBird(id){
         return apiClient.get('/birds/' + id);
@@ -22,8 +23,7 @@ export default{
     getPair(id){
         return axios.get('http://localhost:3000/pairs/', { params: { cageNumber: id } });
     },
-    getClutch(){
-      
-        return apiClient.get('/clutches/?id=987&id=876');
-    },
+    getClutch(ids){
+       return axios.get('http://localhost:3000/clutches/', { params: { id: ids } });
+}
 }

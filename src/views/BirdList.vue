@@ -1,8 +1,9 @@
 <template>
-<h2>All of our birds</h2>
+  <!-- All Individual Birds Hidden -->
+ <h2>All of our birds</h2>
 <div class="events">
-<BirdCard v-for="bird in birds" :key="bird.id" :bird="bird" />
-</div>
+<BirdCard v-for="bird in birds" :key="bird.id" :bird="bird" class="birdCards"/>
+</div> 
 <h2>All of our Pairs</h2>
 <div class="events">
 <PairCard v-for="pair in pairs" :key="pair.cageNumber" :pair="pair" />
@@ -54,6 +55,9 @@ export default{
   align-items: center;
   justify-content: center;
   column-gap: 3%;
+}
+.birdCards{
+  display:none;
 }
 @media (max-width: 480px) {
   .events {
