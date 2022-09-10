@@ -4,8 +4,8 @@ var serveStatic = require('serve-static');
 app = express();
 app.use(serveStatic(__dirname));
 var port = process.env.PORT || 300;
-app.listen(port);
-console.log('server started '+ port);
+
+
 
 var jsonServer = require('json-server');
 var server = jsonServer.create();
@@ -16,4 +16,5 @@ var middlewares = jsonServer.defaults();
 server.use(middlewares);
 server.use(router);
 
-server.listen(port);
+app.listen(port);
+console.log('server started '+ port);
