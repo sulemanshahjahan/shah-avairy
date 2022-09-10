@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: 'https://phpstack-663883-2850727.cloudwaysapps.com',
     withCredentials: false, 
     headers: {
         Accept: 'application/json',
@@ -21,9 +21,9 @@ export default{
         return apiClient.get('/pairs');
     },
     getPair(id){
-        return axios.get('http://localhost:3000/pairs/', { params: { cageNumber: id } });
+        return axios.get('https://phpstack-663883-2850727.cloudwaysapps.com/pairs/', { params: { cageNumber: id } });
     },
     getClutch(ids){
-       return axios.get('http://localhost:3000/clutches/', { params: { id: ids } });
+       return axios.get('https://phpstack-663883-2850727.cloudwaysapps.com/clutches/', { params: { id: ids } });
 }
 }
