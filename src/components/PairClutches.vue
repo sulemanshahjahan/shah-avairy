@@ -1,9 +1,20 @@
 <template>
-    <h5>Number: {{clutchids + 1}} Eggs: {{clutch.eggs.length}}</h5>
-    <ul v-for="clutch in clutch.eggs" :key="clutch" class="clutch">
-        <li>{{clutch.status }}</li>
-        <li>{{clutch.dateOfBinding }}</li>
-        </ul>
+  <div class="col-4">   <div class="card"  style="width: 100%;">        <div class="card-header">
+          <h5>Number: {{clutchids + 1}} Eggs: {{clutch.eggs.length}}</h5>
+  </div>
+  <ul class="list-group list-group-flush"  v-for="clutch in clutch.eggs" :key="clutch">
+    <li class="list-group-item">{{clutch.status }}</li>
+    <li class="list-group-item">{{clutch.dateOfBinding }}</li>
+    
+  </ul>
+</div>
+</div>
+
+
+
+
+
+
 </template>
 <script>
     export default {

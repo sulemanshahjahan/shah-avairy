@@ -1,9 +1,15 @@
 <template>
-  <router-link :to="{name: 'BirdDetails', params: {id: bird.id}}" class="bird-card">
-    <h2>{{bird.name}}</h2>
-    <p>Gender: {{bird.gender}}</p>
-    <p>Date Of Birth: {{bird.dateOfBirth}}</p>
-  </router-link>
+
+<div class="col">
+  <div  class="card" style="width: 100%;">
+  <div class="card-body">
+    <h5 class="card-title">{{bird.name}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{bird.gender}}</h6>
+    <router-link :to="{name: 'BirdDetails', params: {id: bird.id}}"> View Bird</router-link>
+  </div>
+</div>
+</div>
+
 </template>
 
 <script>

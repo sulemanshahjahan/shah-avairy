@@ -1,9 +1,11 @@
 <template>
   <!-- All Individual Birds Hidden -->
- <h2>All of our birds</h2>
+ <h2 class="hidden">All of our birds</h2>
 <div class="events">
 <BirdCard v-for="bird in birds" :key="bird.id" :bird="bird" class="birdCards"/>
 </div> 
+  <!-- All Individual Birds Hidden -->
+
 <h2>All of our Pairs</h2>
 <div class="events">
 <PairCard v-for="pair in pairs" :key="pair.cageNumber" :pair="pair" />
@@ -50,6 +52,9 @@ export default{
 </script>
 
 <style scoped>
+  .hidden{
+    display:none;
+  }
 .events { 
   display: flex;
   align-items: center;

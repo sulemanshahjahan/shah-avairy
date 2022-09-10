@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "serve": "vue-cli-service serve",
     "start": "node server.js",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
@@ -10,6 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "bootstrap": "^5.2.1",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
     "vue-axios": "^3.4.1",
@@ -35,6 +37,7 @@
     "eslint-plugin-vue": "^8.0.3",
     "jest": "^27.0.5",
     "json-server": "^0.17.0",
+    "parcel": "^2.7.0",
     "prettier": "^2.4.1"
   },
   "eslintConfig": {
