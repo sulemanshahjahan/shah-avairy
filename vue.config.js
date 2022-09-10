@@ -10,6 +10,6 @@ module.exports = {
   },
 };
 
-//module.exports = {
-//publicPath: '/dist/'
-//}
+module.exports = {
+publicPath: '/dist/'
+}
