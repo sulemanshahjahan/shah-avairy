@@ -8,6 +8,7 @@ const routes = [
     path: "/",
     name: "BirdsList",
     component: BirdsList,
+    pops: route  => ({page: parseInt(route.query.page) || 1})
   },
   {
     path: "/bird-details/:id",

@@ -17,13 +17,13 @@ export default{
     getBird(id){
         return apiClient.get('/birds/' + id);
     },
-    getPairs(){
-        return apiClient.get('/pairs');
+    getPairs(perPage, page){
+        return apiClient.get('/pairs?_limit=' + perPage + '&_page=' + page);
     },
     getPair(id){
         return apiClient.get('/pairs/', { params: { cageNumber: id } });
     },
-    getClutch(ids){
-       return apiClient.get('/clutches/', { params: { id: ids } });
+    getClutch(idArray){
+       return apiClient.get('/clutches/', { params: { id: idArray } });
 }
 }

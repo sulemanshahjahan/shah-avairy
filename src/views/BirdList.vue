@@ -21,6 +21,7 @@ import PairCard from "@/components/PairCard.vue";
 
 export default{
   name: 'BirdList',
+  props: ['page'],
   components:{
     BirdCard,
     PairCard
@@ -40,7 +41,7 @@ export default{
       console.log(error);
     })
 
-    ApiCall.getPairs()
+    ApiCall.getPairs(4, this.page)
     .then(response => {
       this.pairs = response.data
     })
