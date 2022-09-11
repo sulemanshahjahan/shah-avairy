@@ -42,4 +42,7 @@ nav a.router-link-exact-active {
 li.nav-item {
     padding-right: 20px;
 }
+.h2, h2{
+  padding:30px 0;
+}
 </style>

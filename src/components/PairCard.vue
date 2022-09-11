@@ -4,7 +4,7 @@
   <div  class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">{{pair.name}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted"><strong>Pair No: </strong> {{pair.cageNumber}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted"><strong>Cage Number: </strong> {{pair.cageNumber}}</h6>
     <router-link :to="{name: 'PairDetails', params: { cageNumber: pair.cageNumber}}" > View Bird</router-link>
   </div>
 </div>

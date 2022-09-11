@@ -3,9 +3,7 @@
           <h5>Number: {{clutchids + 1}} Eggs: {{clutch.eggs.length}}</h5>
   </div>
   <ul class="list-group list-group-flush"  v-for="clutch in clutch.eggs" :key="clutch">
-    <li class="list-group-item">{{clutch.status }}</li>
-    <li class="list-group-item">{{clutch.dateOfBinding }}</li>
-    
+    <li class="list-group-item">{{clutch.status }} | <span>{{clutch.dateOfBinding }}</span></li>
   </ul>
 </div>
 </div>

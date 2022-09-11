@@ -8,7 +8,7 @@
     
 
     <div class="birds">
-      <h2>Make & Female</h2>
+      <h2>Male & Female</h2>
       <div class="container text-center">
       <div class="row">
 
