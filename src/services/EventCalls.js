@@ -17,8 +17,8 @@ export default{
     getBird(id){
         return apiClient.get('/birds/' + id);
     },
-    getPairs(perPage, page){
-        return apiClient.get('/pairs?_limit=' + perPage + '&_page=' + page);
+    getPairs(perPage){
+        return apiClient.get('/pairs?_limit=' + perPage + '&_page=1' );
     },
     getPair(id){
         return apiClient.get('/pairs/', { params: { cageNumber: id } });
