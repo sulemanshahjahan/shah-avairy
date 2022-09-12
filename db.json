@@ -12,8 +12,8 @@
     "pairs": [
       {"id": 101, "male": "Red Eye 01", "female": "Red Eye 02", "datePairing": "30-09-2022", "clutchId": [987, 876],  "cageNumber": 45, "status": "available", "name": "Red Eye Pair 1", "birdsID": [1,2] },
       {"id": 202, "male": "Red Eye 03", "female": "Red Eye 04", "datePairing": "30-09-2022", "clutchId": [987] ,  "cageNumber": 46, "status": "available", "name": "Red Eye Pair 2", "birdsID": [3,4] },
-      {"id": 303, "male": "Red Eye 05", "female": "Red Eye 06", "datePairing": "30-09-2022", "clutchId": [987] ,  "cageNumber": 21, "status": "available", "name": "Red Eye Pair 2", "birdsID": [5,6] },
-      {"id": 404, "male": "Red Eye 07", "female": "Red Eye 08", "datePairing": "30-09-2022", "clutchId": [987] ,  "cageNumber": 12, "status": "available", "name": "Red Eye Pair 2", "birdsID": [7,8] }
+      {"id": 303, "male": "Red Eye 05", "female": "Red Eye 06", "datePairing": "30-09-2022", "clutchId": [987] ,  "cageNumber": 21, "status": "available", "name": "Red Eye Pair 3", "birdsID": [5,6] },
+      {"id": 404, "male": "Red Eye 07", "female": "Red Eye 08", "datePairing": "30-09-2022", "clutchId": [987] ,  "cageNumber": 12, "status": "available", "name": "Red Eye Pair 4", "birdsID": [7,8] }
     ],
     "clutches": [
       {

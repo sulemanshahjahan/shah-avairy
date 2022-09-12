@@ -13,6 +13,7 @@
     "axios": "^0.27.2",
     "bootstrap": "^5.2.1",
     "core-js": "^3.8.3",
+    "nprogress": "^0.2.0",
     "vue": "^3.2.13",
     "vue-axios": "^3.4.1",
     "vue-router": "^4.0.3",
@@ -52,7 +53,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {},
+    "rules": {
+      "vue/multi-word-component-names": "off"
+    },
     "overrides": [
       {
         "files": [

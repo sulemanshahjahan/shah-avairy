@@ -2,7 +2,7 @@
   <!-- All Individual Birds Hidden -->
  <h2 class="hidden">All of our birds</h2>
 <div class="events">
-<BirdCard v-for="bird in birds" :key="bird.id" :bird="bird" class="birdCards"/>
+
 </div> 
   <!-- All Individual Birds Hidden -->
 
@@ -12,42 +12,86 @@
 </div>
 
 
+<div id="pagination">
+  <router-link
+      :to="{ name: 'BirdsList', query: { page: page - 1 } }"
+      rel="prev"
+      v-if="page != 1"
+      >Prev Page</router-link
+    >
+
+    <router-link
+      :to="{ name: 'BirdsList', query: { page: page + 1 } }"
+      rel="next"
+      v-if="hasNextPage"
+      >Next Page</router-link
+    >
+</div>
+
+
 </template>
 
 <script>
-import BirdCard from "@/components/BirdCard.vue";
+
 import ApiCall from "@/services/EventCalls";
 import PairCard from "@/components/PairCard.vue";
+
 
 export default{
   name: 'BirdList',
   props: ['page'],
   components:{
-    BirdCard,
+    
     PairCard
 },
   data(){
     return{
       birds: [],
-      pairs: []
+      pairs: [],
+      totalPairs: 0
     }
   },
-  created() {
-    ApiCall.getBirds()
-    .then(response => {
-      this.birds = response.data
-    })
-    .catch(error => {
-      console.log(error);
-    })
+  beforeRouteEnter(routeTo, routeFrom, next) {
 
-    ApiCall.getPairs(4, this.page)
+
+     ApiCall.getPairs(2, parseInt(routeTo.query.page) || 1)
     .then(response => {
-      this.pairs = response.data
+      next(comp => {
+        comp.pairs = response.data
+        comp.totalPairs = response.headers['x-total-count'];
+      })
     })
     .catch(error => {
-      console.log(error);
-    })
+        if (error.response && error.response.status == 404) {
+          next({ name: '404Resource', params: { resource: 'pair' } })
+        } else {
+         next({ name: 'NetworkError' })
+        }
+      })
+  },
+  beforeRouteUpdate(routeTo) {
+
+
+return ApiCall.getPairs(2, parseInt(routeTo.query.page) || 1)
+.then(response => {
+ 
+    this.pairs = response.data
+    this.totalPairs = response.headers['x-total-count'];
+ 
+})
+.catch(error => {
+    if (error.response && error.response.status == 404) {
+      return ({ name: '404Resource', params: { resource: 'pair' } })
+    } else {
+      return ({ name: 'NetworkError' })
+    }
+  })
+},
+  computed:{
+    hasNextPage(){
+        var totalPage = Math.ceil(this.totalPairs / 2);
+        return this.page < totalPage;
+    }
   }
 }
 </script>
